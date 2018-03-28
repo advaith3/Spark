@@ -88,9 +88,6 @@ function start(client, config) {
         }
     })
     client.on("ready", () => {
-        if (client.user.bot == false) {
-            return console.warn("This wrapper doesn't support selfbots.")
-        }
         client.fetchApplication().then((application) => {
             if (application.owner == null) {
                 if (client.config.owner_id == null) {
